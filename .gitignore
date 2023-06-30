@@ -5,3 +5,10 @@
 build
 
 .DS_STORE
+
+.classpath
+.project
+.settings
+.springBeans
+.externalToolBuilders
+*.class

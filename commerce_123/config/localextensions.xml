@@ -1,0 +1,17 @@
+<hybrisconfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="resources/schemas/extensions.xsd">
+  <extensions>
+    <!--
+            All extensions located in ${HYBRIS_BIN_DIR}/platform/ext are automatically loaded.
+            More information about how to configure available extensions can be found here : https://help.sap.com/viewer/DRAFT/b490bb4e85bc42a7aa09d513d0bcb18e/1905/en-US/8bbf0b9d866910149688b8d696c8d47e.html
+    -->
+    <path dir="${HYBRIS_BIN_DIR}" autoload="false"/>
+    <extension name="concerttours"/>
+    <extension name="platformbackoffice"/>
+
+    <!-- ext-template -->
+    <extension name="yempty"/>
+    <extension name="yhacext"/>
+
+  </extensions>
+</hybrisconfig>
