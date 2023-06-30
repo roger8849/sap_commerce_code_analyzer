@@ -1,0 +1,3 @@
+Problem,Package,File,Priority,Line,Description,Rule set,Rule
+"",,/commerce_123/bin/custom/concerttours/web/webroot/WEB-INF/lib/displaytag-1.2.jar,5,,Jar with name displaytag-1.2 couldn't find the version in its manifest.,Third party libraries,JarVersionNotInJarManifest
+"",,/commerce_123/config/licence/hybrislicence.jar,5,,Jar with name hybrislicence couldn't find the version in its manifest.,Third party libraries,JarVersionNotInJarManifest

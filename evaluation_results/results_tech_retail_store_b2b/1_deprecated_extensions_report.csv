@@ -1,0 +1,5 @@
+"Problem","Package","File","Priority","Line","Description","Rule set","Rule"
+"1","","/b2btechretailstore/repository/hybris/config/localextensions.xml","1","10","A local extensions file is referencing a deprecated SAP Commerce extension.","Deprecated extensions in LocalExtensions","DeprecatedExtensionInLocalExtensions"
+"2","","/b2btechretailstore/repository/hybris/config/localextensions.xml","1","13","A local extensions file is referencing a deprecated SAP Commerce extension.","Deprecated extensions in LocalExtensions","DeprecatedExtensionInLocalExtensions"
+"1","","/b2btechretailstore/repository/hybris/env/common/localextensions.xml","1","10","A local extensions file is referencing a deprecated SAP Commerce extension.","Deprecated extensions in LocalExtensions","DeprecatedExtensionInLocalExtensions"
+"2","","/b2btechretailstore/repository/hybris/env/common/localextensions.xml","1","13","A local extensions file is referencing a deprecated SAP Commerce extension.","Deprecated extensions in LocalExtensions","DeprecatedExtensionInLocalExtensions"

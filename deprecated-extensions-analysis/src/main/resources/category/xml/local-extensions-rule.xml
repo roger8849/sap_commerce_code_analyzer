@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+
+<ruleset name="Deprecated extensions in LocalExtensions"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        Rules to detect if deprecated extensions are being used in the localextensions.xml file
+    </description>
+
+    <rule name="DeprecatedExtensionInLocalExtensions"
+          language="xml"
+          message="A local extensions file is referencing a deprecated SAP Commerce extension."
+          class="net.sourceforge.pmd.lang.rule.XPathRule"
+          externalInfoUrl="${pmd.website.baseurl}/pmd_rules_xml_errorprone.html#mistypedcdatasection">
+        <description>
+            LocalProperties file is making reference to a deprecated extension.
+        </description>
+        <priority>1</priority>
+        <properties>
+            <property name="xpath">
+                <value>
+<![CDATA[
+//extension[@name='acceleratorstorefrontcommons' or
+@name='acceleratorwebservicesaddon' or
+@name='accountsummaryaddon' or
+@name='adaptivesearchsamplesaddon' or
+@name='addonsupport' or
+@name='admincockpit' or
+@name='assistedservicecustomerinterestsaddon' or
+@name='assistedservicepromotionaddon' or
+@name='assistedservicestorefront' or
+@name='assistedserviceyprofileaddon' or
+@name='b2bacceleratoraddon' or
+@name='b2boccaddon' or
+@name='b2bpunchoutaddon' or
+@name='captchaaddon' or
+@name='chineseaddressaddon' or
+@name='chineseaddressoccaddon' or
+@name='chinesecommerceorgaddressaddon' or
+@name='chineselogisticaddon' or
+@name='chineselogisticoccaddon' or
+@name='chinesepaymentaddon' or
+@name='chinesepaymentoccaddon' or
+@name='chineseproductsharingaddon' or
+@name='chineseprofileaddon' or
+@name='chineseprofileoccaddon' or
+@name='chinesepspalipaysamplesaddon' or
+@name='chinesepspwechatpaymentaddon' or
+@name='chinesepspwechatpaysamplesaddon' or
+@name='chinesestoreaddon' or
+@name='chinesetaxinvoiceaddon' or
+@name='chinesetaxinvoiceoccaddon' or
+@name='cmscockpit' or
+@name='cmsoccaddon' or
+@name='cockpit' or
+@name='commerceorgaddon' or
+@name='commerceorgsamplesaddon' or
+@name='configurablebundleaddon' or
+@name='configurablebundlecockpits' or
+@name='consignmenttrackingaddon' or
+@name='consignmenttrackingoccaddon' or
+@name='customercouponaddon' or
+@name='customercouponoccaddon' or
+@name='customercouponsamplesaddon' or
+@name='customerinterestsaddon' or
+@name='customerinterestsoccaddon' or
+@name='customerticketingaddon' or
+@name='eventtrackingmodel' or
+@name='eventtrackingpublisher' or
+@name='eventtrackingservices' or
+@name='eventtrackingwsaddon' or
+@name='financialacceleratorstorefront' or
+@name='financialb2baddon' or
+@name='financialstore' or
+@name='financialwebservices' or
+@name='hybrisanalyticsaddon' or
+@name='ldap' or
+@name='marketplaceaddon' or
+@name='marketplacebackofficesamplesaddon' or
+@name='marketplaceoccaddon' or
+@name='marketplacepromotionenginesamplesaddon' or
+@name='merchandisingaddon' or
+@name='merchandisingstorefrontsampledataaddon' or
+@name='messagecentercsoccaddon' or
+@name='multicountrysampledataaddon' or
+@name='notificationaddon' or
+@name='notificationoccaddon' or
+@name='ordermanagementaddon' or
+@name='orderselfserviceaddon' or
+@name='pcmbackofficesamplesaddon' or
+@name='personalizationaddon' or
+@name='personalizationpromotionssampledataaddon' or
+@name='personalizationsampledataaddon' or
+@name='personalizationsearchsamplesaddon' or
+@name='personalizationyprofilesampledataaddon' or
+@name='productcockpit' or
+@name='profiletagaddon' or
+@name='promotionenginesamplesaddon' or
+@name='sapproductconfigb2baddon' or
+@name='savedorderformsoccaddon' or
+@name='selectivecartaddon' or
+@name='selectivecartsplitlistaddon' or
+@name='smarteditaddon' or
+@name='stocknotificationaddon' or
+@name='subscriptionbundlecockpits' or
+@name='subscriptioncockpits' or
+@name='textfieldconfiguratortemplateaddon' or
+@name='textfieldconfiguratortemplateoccaddon' or
+@name='textfieldconfiguratortemplateocctest' or
+@name='timedaccesspromotionengineaddon' or
+@name='timedaccesspromotionengineoccaddon' or
+@name='timedaccesspromotionenginesamplesaddon' or
+@name='verticalnavigationaddon' or
+@name='xyformssamples' or
+@name='xyformsstorefrontcommons' or
+@name='y2ysync' or
+@name='y2ysyncbackoffice' or
+@name='yacceleratorcockpits' or
+@name='yacceleratorstorefront' or
+@name='yaddon' or
+@name='ycommercewebservices' or
+@name='ycommercewebservicestest' or
+@name='yoccaddon' or
+@name='ysapproductconfigaddon']
+]]>
+                </value>
+            </property>
+        </properties>
+        <example>
+You cannot have deprecated extensions referenced in localextensions file.
+        </example>
+    </rule>
+
+</ruleset>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<ruleset name="Database keyword java rule"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        Rule set which defines database keyword detection
+    </description>
+
+    <rule name="DatabaseKeywordRule"
+          language="java"
+          class="co.edu.unal.rules.DatabaseKeywordRule"
+          message="String literal ''{0}'' contains the ''{1}'' function ''{2}'' which belongs to the database engine ''{3}''.">
+        <description>
+            Avoid the usage of Database engine functions. The usage of database engine function violates the loosely coupled database principle of SAP Commerce. This makes the implementation highly coupled of the database engine selected. Use Flexible Search or java functions instead.
+        </description>
+        <priority>1</priority>
+        <example>
+            <![CDATA[
+// Correct
+final String queryString = //
+        "SELECT {p:" + NewsModel.PK + "} "//
+            + "FROM {" + NewsModel._TYPECODE + " AS p} " //
+            + "WHERE {date} >= DATE \'" + theDay + "\' "//
+            + "AND {date} <= DATE \'" + theNextDay + "\'";
+// Incorrect
+final String queryString = //
+        "SELECT {p:" + NewsModel.PK + "} "//
+            + "FROM {" + NewsModel._TYPECODE + " AS p} " //
+            + "WHERE {date} >= DATE \'" + theDay + "\' "//
+            + "AND {date} <= CURRENT_DATE";// CURRENT_DATE is a function from Oracle's database engine
+]]>
+        </example>
+    </rule>
+</ruleset>
